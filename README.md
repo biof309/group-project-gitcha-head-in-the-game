@@ -1,7 +1,7 @@
 final-project-template
 ==============================
 
-[](test_slides.html)
+[idessl](test_slides.html)
 
 A template I recommend for final projects. Feel free to modify as needed!
 Based on Cookiecutter Data Science:
