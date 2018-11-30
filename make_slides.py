@@ -7,11 +7,11 @@ def write_file(filename, contents):
 
 
 def make_slides(path, type):
-    if type == 'revealjs':
+    if type in ('slidy', 'dzslides'):
+        return pypandoc.convert_file(path, to=type, extra_args=['-s'])
+    elif type == 'revealjs':
         return pypandoc.convert_file(path, to=type,
                                      extra_args=['-s', '-V', 'revealjs-url=http://lab.hakim.se/reveal-js'])
-    elif type in ('slidy', 'dzslides'):
-        return pypandoc.convert_file(path, to=type, extra_args=['-s'])
     else:
         return f'Type must be revealjs, slidy, or dzslides, not {type}'
 
