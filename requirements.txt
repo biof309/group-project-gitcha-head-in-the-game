@@ -1,3 +1,5 @@
+pypandoc
+fleep
 # local package
 -e .
 
