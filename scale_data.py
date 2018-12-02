@@ -1,26 +1,19 @@
 scaler=StandardScaler()
 
-scaled=scaler.fit_transform(characteristics)
-np.mean(dogs.loc[:,"height_low_inches"])
 
-x=dogs.loc[:,"height_low_inches"]
-
-print(x.apply(np.mean))
-
-print(x.mean)
-
-x=dogs['height_high_inches']
-
-dogs.loc[:,'height_high_inches'].mean()
-
-dogs['height_high_inches'].astype(float)
-
-type(dogs['height_high_inches'])
-
-x_scaled=scale(x)
-
-array=characteristics.values
-type(array)
+feature_array=characteristics.values
+feature_array=array.astype(float)
+type(feature_array[0,0]) #check that it's a
+np.mean(feature_array[:,0])
+np.std(feature_array[:,0])
 
 
-print(array.mean)
+#scale
+scaled_features=scaler.fit_transform(feature_array)
+#check scaling
+np.mean(scaled_features[:,0])
+np.std(scaled_features[:,0])
+
+
+
+
