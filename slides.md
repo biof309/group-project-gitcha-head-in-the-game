@@ -1,11 +1,13 @@
-% Simple slides with (py)pandoc
-% Martin Skarzynski
-% 2018-09-27
+% DOOOOGGGGZZZ
+% Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+% 2018-12-11
 
-# Hobby
-Zumba
+# We Like Dogs
+So we analyzed dogs
 
-# Fun Fact
+# I wanted a picture of a dog here
+![dog](https://img.huffingtonpost.com/asset/5b7fdeab1900001d035028dc.jpeg?cache=sixpwrbb1s&ops=1910_1000)
+
 I speak 4 natural languages 
 
 - English,
