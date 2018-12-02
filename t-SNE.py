@@ -14,7 +14,7 @@ plt.scatter(x,y, alpha=0.5, c=clusters)
 
 
 for x,y,breed in zip(x,y,breedlist):
-    plt.annotate(breed, (x,y), fontsize=5)
+    plt.annotate(breed, (x,y), fontsize=4, alpha=0.5)
 plt.show()
 
 
