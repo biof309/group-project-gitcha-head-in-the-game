@@ -41,14 +41,15 @@ Project Organization
     │   │   └── make_features.py
     │   │  
     │   ├── exploratory    <- Exploratory data analysis and visualization 
-    │   │   └── make_features.py
+    │   │   ├── make_ave_columns.py
+    │   │   └── make_plots.py
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
+    │   ├── models         <- Clustering scripts
+    │   │   ├── KMeans.py
+    │   │   ├── scale_data.py
+    │   │   └── t-SNE.py
     │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+    │   └── visualization  <- Scripts to visualize results 
     │       └── visualize.py
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
