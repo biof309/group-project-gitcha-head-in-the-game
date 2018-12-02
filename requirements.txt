@@ -4,6 +4,7 @@ fleep
 -e .
 pandas
 numpy
+sklearn
 matplotlib
 
 # external requirements
