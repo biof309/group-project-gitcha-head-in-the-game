@@ -2,6 +2,9 @@ pypandoc
 fleep
 # local package
 -e .
+pandas
+numpy
+matplotlib
 
 # external requirements
 click
