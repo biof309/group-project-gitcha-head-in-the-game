@@ -2,7 +2,7 @@ scaler=StandardScaler()
 
 
 feature_array=characteristics.values
-feature_array=array.astype(float)
+feature_array=feature_array.astype(float)
 type(feature_array[0,0]) #check that it's a
 np.mean(feature_array[:,0])
 np.std(feature_array[:,0])
