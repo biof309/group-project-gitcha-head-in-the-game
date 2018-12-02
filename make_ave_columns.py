@@ -41,6 +41,9 @@ Characteristics_Total = np.append(Characteristics_with_average_height,Characteri
 
 print(Characteristics_Total)
 
+#Table of Average Heights and Weights (0= ave height, 1= ave weight)
+Ave_Heights_Weights= np.append(average_height_column, average_weight_column, axis=1)
+
 # Add header row with labels to table of information
 Characteristics_Total_df = pd.DataFrame(Characteristics_Total, columns = ['Low_Height', 'High_Height', 'Ave_Height', 'Low_Weight', 'Heigh_Weight', 'Ave_Weight'])
 
