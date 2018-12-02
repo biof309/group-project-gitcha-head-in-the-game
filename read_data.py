@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding="ISO-8859-1")
 dogs.head()
@@ -54,10 +55,12 @@ Characteristics_with_average_weight = np.append(columns_weight, average_weight_c
 
 Characteristics_Total = np.append(Characteristics_with_average_height,Characteristics_with_average_weight, axis=1)
 
+print(Characteristics_Total)
 
+# Add header row with labels to table of information
+Characteristics_Total_df = pd.DataFrame(Characteristics_Total, columns = ['Low_Height', 'High_Height', 'Ave_Height', 'Low_Weight', 'Heigh_Weight', 'Ave_Weight'])
 
-
-
+print(Characteristics_Total_df)
 
 
 
