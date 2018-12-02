@@ -1,4 +1,4 @@
-final-project-template
+Doggo Project aka gitcha head in the game
 ==============================
 
 [slides](slides.html)
