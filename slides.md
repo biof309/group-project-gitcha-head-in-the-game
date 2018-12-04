@@ -40,5 +40,7 @@ So we analyzed data about dogs
 # A local image
 ![coats](Dog_coat_variation.png)
 
+# Hmmm
+![This](Dog_Data.png)
 
 
