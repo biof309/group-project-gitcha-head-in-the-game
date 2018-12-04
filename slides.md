@@ -17,7 +17,17 @@ So we analyzed data about dogs
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
 #Our Data
-dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding="ISO-8859-1")
+
+#Added New Columns for Average Height and Weight
+
+#Generated an Exploratory Pear Plot
+- Wanted to take a closer look at the scatter plot and histograms
+
+#Scatter Plot of Average Height & Weight
+
+#Histogram of Average Height
+
+#Histogram of Average Weight
 
 
 # I wanted a picture of a dog here
