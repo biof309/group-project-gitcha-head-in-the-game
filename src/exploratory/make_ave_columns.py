@@ -14,7 +14,7 @@ columns_height = characteristics_array[:,0:2]
 columns_weight = characteristics_array[:,2:4]
 
 #Find average low height and average high height
-average_height_wholecolumn = np.mean(columns_height, axis = 0)
+average_height_wholecolumn = np.mean(columns_height, axis = 1)
 
 #Find average height and weight for each breed
 average_height = np.mean(columns_height, axis = 1)
@@ -49,6 +49,11 @@ Characteristics_Total_df = pd.DataFrame(Characteristics_Total, columns = ['Low_H
 
 print(Characteristics_Total_df)
 
+#Find Average Height
+np.mean(average_height)
+
+#Find Average Weight
+np.mean(average_weight)
 
 
 
