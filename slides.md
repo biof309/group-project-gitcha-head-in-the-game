@@ -12,9 +12,9 @@ So we analyzed data about dogs
 - Gives lowest and highest heights and weights for each of 150 dog breeds 
 
 #Unicode Error Importing Our Data
-- Used Pandas (pd.read.csv)
+- Used Pandas (pd.read_csv())
 - But our csv file was a "Latin1" file or a "ISO-8859-1" file
-- Converted to UTF-8, the standard file type 
+- Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
 #Our Data
 dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding="ISO-8859-1")
