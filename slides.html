@@ -40,14 +40,43 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <div id="unicode-error-importing-our-data" class="slide section level1">
 <h1>Unicode Error Importing Our Data</h1>
 <ul>
-<li>Used Pandas (pd.read.csv)</li>
+<li>Used Pandas (pd.read_csv())</li>
 <li>But our csv file was a &quot;Latin1&quot; file or a &quot;ISO-8859-1&quot; file</li>
-<li>Converted to UTF-8, the standard file type</li>
+<li>Added an argument to our read_csv() function that included the encoding information and eliminated the error</li>
 </ul>
 </div>
 <div id="our-data-1" class="slide section level1">
 <h1>Our Data</h1>
-<p>dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding=&quot;ISO-8859-1&quot;)</p>
+</div>
+<div id="added-new-columns-for-average-height-and-weight" class="slide section level1">
+<h1>Added New Columns for Average Height and Weight</h1>
+</div>
+<div id="generated-an-exploratory-pear-plot" class="slide section level1">
+<h1>Generated an Exploratory Pear Plot</h1>
+<ul>
+<li>Wanted to take a closer look at the scatter plot and histograms</li>
+</ul>
+</div>
+<div id="scatter-plot-of-average-height-weight" class="slide section level1">
+<h1>Scatter Plot of Average Height &amp; Weight</h1>
+<div class="figure">
+<img src="Ave_scatter.png" alt="Average Height and Weight" />
+<p class="caption">Average Height and Weight</p>
+</div>
+</div>
+<div id="histogram-of-average-height" class="slide section level1">
+<h1>Histogram of Average Height</h1>
+<div class="figure">
+<embed src="Ave_Height_Hist.png&#39;" />
+<p class="caption">Average Height</p>
+</div>
+</div>
+<div id="histogram-of-average-weight" class="slide section level1">
+<h1>Histogram of Average Weight</h1>
+<div class="figure">
+<img src="Ave_Weight_Hist.png" alt="Average Weight" />
+<p class="caption">Average Weight</p>
+</div>
 </div>
 <div id="i-wanted-a-picture-of-a-dog-here" class="slide section level1">
 <h1>I wanted a picture of a dog here</h1>

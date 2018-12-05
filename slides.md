@@ -25,9 +25,13 @@ So we analyzed data about dogs
 
 #Scatter Plot of Average Height & Weight
 
+![Average Height and Weight](Ave_scatter.png)
+
 #Histogram of Average Height
+![Average Height](Ave_Height_Hist.png')
 
 #Histogram of Average Weight
+![Average Weight](Ave_Weight_Hist.png)
 
 
 # I wanted a picture of a dog here
