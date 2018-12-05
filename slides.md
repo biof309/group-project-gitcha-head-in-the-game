@@ -56,13 +56,40 @@ So we analyzed data about dogs
 
 #Scatter Plot of Average Height & Weight
 ![Average Height and Weight](src/visualization/Ave_scatter.png)
+```python
+#Make Scatter Plot
+import matplotlib.pyplot as plt
+Ave_scatter= plt.scatter(Ave_Heights_Weights[:,0], Ave_Heights_Weights[:,1], color='skyblue')
+plt.xlabel('Average Height (Inches)')
+plt.ylabel('Average Weight (lbs)')
+plt.title('Average Height and Weight of All Breeds')
+plt.savefig('Ave_scatter.png')
+```
 
 #Histogram of Average Height
 ![Average Height](src/visualization/Ave_Height_Hist.png)
+```python
+# Make Histogram average height
+import matplotlib.pyplot as plt
+Ave_Height_Hist= plt.hist(Ave_Heights_Weights[:,0],color='skyblue')
+plt.xlabel('Average Height (Inches)')
+plt.ylabel('# Dogs')
+plt.title('Average Height of All Breeds')
+plt.savefig('Ave_Height_Hist.png')
+```
+
 
 #Histogram of Average Weight
 ![Average Weight](src/visualization/Ave_Weight_Hist.png)
-
+```python
+# Make Histagram of Average Weight
+import matplotlib.pyplot as plt
+Ave_Weight_Hist=plt.hist(Ave_Heights_Weights[:,1], color="skyblue")
+plt.xlabel('Average Weight (lbs)')
+plt.ylabel('# Dogs')
+plt.title('Average Weight of All Breeds')
+plt.savefig('Ave_Weight_Hist.png')
+```
 #We wanted to explore which breeds of dogs would cluster together
 So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
 ```python

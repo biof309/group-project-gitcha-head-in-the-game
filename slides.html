@@ -164,6 +164,13 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <img src="src/visualization/Ave_scatter.png" alt="Average Height and Weight" />
 <p class="caption">Average Height and Weight</p>
 </div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#Make Scatter Plot</span>
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+Ave_scatter<span class="op">=</span> plt.scatter(Ave_Heights_Weights[:,<span class="dv">0</span>], Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>)
+plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)
+plt.ylabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)
+plt.title(<span class="st">&#39;Average Height and Weight of All Breeds&#39;</span>)
+plt.savefig(<span class="st">&#39;Ave_scatter.png&#39;</span>)</code></pre></div>
 </div>
 <div id="histogram-of-average-height" class="slide section level1">
 <h1>Histogram of Average Height</h1>
@@ -171,6 +178,13 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <img src="src/visualization/Ave_Height_Hist.png" alt="Average Height" />
 <p class="caption">Average Height</p>
 </div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histogram average height</span>
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+Ave_Height_Hist<span class="op">=</span> plt.hist(Ave_Heights_Weights[:,<span class="dv">0</span>],color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>)
+plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)
+plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
+plt.title(<span class="st">&#39;Average Height of All Breeds&#39;</span>)
+plt.savefig(<span class="st">&#39;Ave_Height_Hist.png&#39;</span>)</code></pre></div>
 </div>
 <div id="histogram-of-average-weight" class="slide section level1">
 <h1>Histogram of Average Weight</h1>
@@ -178,6 +192,13 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <img src="src/visualization/Ave_Weight_Hist.png" alt="Average Weight" />
 <p class="caption">Average Weight</p>
 </div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histagram of Average Weight</span>
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+Ave_Weight_Hist<span class="op">=</span>plt.hist(Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&quot;skyblue&quot;</span>)
+plt.xlabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)
+plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
+plt.title(<span class="st">&#39;Average Weight of All Breeds&#39;</span>)
+plt.savefig(<span class="st">&#39;Ave_Weight_Hist.png&#39;</span>)</code></pre></div>
 </div>
 <div id="we-wanted-to-explore-which-breeds-of-dogs-would-cluster-together" class="slide section level1">
 <h1>We wanted to explore which breeds of dogs would cluster together</h1>
