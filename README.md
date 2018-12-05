@@ -33,18 +33,35 @@ Project Organization
     │   ├── data           <- Scripts to download data and make features
     │   │   ├── read_data.py
     │   │   └── make_features.py
-    │   │  
-    │   ├── exploratory    <- Exploratory data analysis and visualization 
+    │   │   
+    │   ├── dog_pictures   <- Some dog pictures for the slides
+    │   │ 
+    │   ├── exploratory    <- Scripts for producing exploratory data analysis and visualization 
     │   │   ├── make_ave_columns.py
-    │   │   └── make_plots.py
+    │   │   ├── make_height_hist.py
+    │   │   ├── make_weight_hist.py
+    │   │   ├── pairplot.py
+    │   │   └── Scatter_plot.py
     │   │
-    │   ├── models         <- Clustering scripts
-    │   │   ├── KMeans.py
+    │   ├── models         <- Scripts and output for KMeans clustering
     │   │   ├── scale_data.py
-    │   │   └── t-SNE.py
+    │   │   ├── KMeans.py
+    │   │   ├── clusters.png
+    │   │   └── clustered_breeds.txt
     │   │
-    │   └── visualization  <- Scripts to visualize results 
-    │       └── visualize.py
+    │   └── visualization  <- Scripts to get t-SNE vizualiation, as well as all exploratory plots and plots of clusters
+    │       ├── Ave_Height_Hist.png
+    │       ├── Ave_scatter.png
+    │       ├── Ave_Weight_Hist.png
+    │       ├── pairplot.png
+    │       ├── t-SNE.py
+    │       ├── t-SNE_plt.py
+    │       ├── tSNE.png
+    │       ├── cluster0.png
+    │       ├── cluster1.png
+    │       ├── cluster2.png
+    │       ├── cluster3.png
+    │       └── cluster4.png
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
