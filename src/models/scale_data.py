@@ -1,6 +1,7 @@
+#create instance of standard scaler
 scaler=StandardScaler()
 
-
+#
 feature_array=characteristics.values
 feature_array=feature_array.astype(float)
 type(feature_array[0,0]) #check that it's a
