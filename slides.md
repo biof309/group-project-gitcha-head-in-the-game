@@ -17,13 +17,13 @@ So we analyzed data about dogs
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
 # Our Data
-![OurData](Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png)
+![OurData](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png)
 
 # Created New Columns for Average Height and Weight
-![AddAve](Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
+![AddAve](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
 
 #Added Columns to Our Data
-![AddCols](Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
+![AddCols](src/dog_pictures/Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
 
 #Found Average Height
 - Using np.mean(average_height), we found the average height to be 19.5 inches
@@ -50,8 +50,9 @@ So we analyzed data about dogs
 
 
 # Generated an Exploratory Pair Plot
-![pairplot](src/visualization/pairplot.png)
 - Wanted to take a closer look at the scatter plot and histograms
+![pairplot](src/visualization/pairplot.png)
+
 
 #Scatter Plot of Average Height & Weight
 ![Average Height and Weight](src/visualization/Ave_scatter.png)
@@ -106,7 +107,7 @@ for x,y,breed in zip(x,y,breedlist):
 
 #Here are the dogs that were clustered together by the KMearns clustering
 
-![clusters](src/models/clusters)
+![clusters](src/models/clusters.png)
 
 #Conclusions
 - Our data formed 5 clusters based on height & weight 

@@ -85,21 +85,21 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <div id="our-data-1" class="slide section level1">
 <h1>Our Data</h1>
 <div class="figure">
-<img src="Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png" alt="OurData" />
+<img src="src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png" alt="OurData" />
 <p class="caption">OurData</p>
 </div>
 </div>
 <div id="created-new-columns-for-average-height-and-weight" class="slide section level1">
 <h1>Created New Columns for Average Height and Weight</h1>
 <div class="figure">
-<img src="Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png" alt="AddAve" />
+<img src="src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png" alt="AddAve" />
 <p class="caption">AddAve</p>
 </div>
 </div>
 <div id="added-columns-to-our-data" class="slide section level1">
 <h1>Added Columns to Our Data</h1>
 <div class="figure">
-<img src="Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png" alt="AddCols" />
+<img src="src/dog_pictures/Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png" alt="AddCols" />
 <p class="caption">AddCols</p>
 </div>
 </div>
@@ -197,27 +197,32 @@ clusters<span class="op">=</span>kmeans.predict(scaled_features)</code></pre></d
 <div id="we-wanted-to-plot-these-clusters" class="slide section level1">
 <h1>We wanted to plot these clusters</h1>
 <p>We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> matplotlib <span class="im">import</span> cm
-<span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE
 <span class="co">#create instance of t-SNE</span>
 tsne<span class="op">=</span>TSNE(learning_rate<span class="op">=</span><span class="dv">100</span>)
 <span class="co">#fit t-SNE featres</span>
-tsne_features<span class="op">=</span>tsne.fit_transform(scaled_features)</code></pre></div>
+tsne_features<span class="op">=</span>tsne.fit_transform(scaled_features)breedlist<span class="op">=</span><span class="bu">list</span>(breeds.values.T.flatten())
+
+<span class="co">##make plot</span>
+
+unique_clusters<span class="op">=</span><span class="bu">list</span>(<span class="bu">set</span>(clusters))  <span class="co">#cluster labels</span>
+cmap<span class="op">=</span>cm.get_cmap(<span class="st">&quot;viridis&quot;</span>,<span class="dv">5</span>)  <span class="co">#color map</span>
+plt.scatter(x,y, alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span>clusters, label<span class="op">=</span>unique_clusters, cmap<span class="op">=</span>cmap, vmin<span class="op">=-</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="fl">4.4</span>) <span class="co">#make graph</span>
+<span class="cf">for</span> x,y,breed <span class="kw">in</span> <span class="bu">zip</span>(x,y,breedlist):
+    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">4</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)  <span class="co">#add labels</span></code></pre></div>
 </div>
 <div id="here-is-our-final-t-sne-plot" class="slide section level1">
 <h1>Here is our final t-SNE plot</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">breedlist<span class="op">=</span><span class="bu">list</span>(breeds.values.T.flatten())
-unique_clusters<span class="op">=</span><span class="bu">list</span>(<span class="bu">set</span>(clusters))
-cmap<span class="op">=</span>cm.get_cmap(<span class="st">&quot;viridis&quot;</span>,<span class="dv">5</span>)
-plt.scatter(x,y, alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span>clusters, label<span class="op">=</span>unique_clusters, cmap<span class="op">=</span>cmap, vmin<span class="op">=-</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="fl">4.4</span>)
-c<span class="op">=</span>plt.colorbar(ticks<span class="op">=</span>unique_clusters)
-c.set_label(<span class="st">&#39;KMeans clusters&#39;</span>)
-plt.title(<span class="st">&#39;T-SNE Plot of Dog Breeds&#39;</span>)
-<span class="cf">for</span> x,y,breed <span class="kw">in</span> <span class="bu">zip</span>(x,y,breedlist):
-    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">4</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</code></pre></div>
 <div class="figure">
 <img src="src/visualization/tSNE.png" alt="t-SNE" />
 <p class="caption">t-SNE</p>
+</div>
+</div>
+<div id="here-are-the-dogs-that-were-clustered-together-by-the-kmearns-clustering" class="slide section level1">
+<h1>Here are the dogs that were clustered together by the KMearns clustering</h1>
+<div class="figure">
+<img src="src/models/clusters.png" alt="clusters" />
+<p class="caption">clusters</p>
 </div>
 </div>
 <div id="conclusions" class="slide section level1">
