@@ -61,7 +61,8 @@ So we analyzed data about dogs
 #Histogram of Average Weight
 ![Average Weight](Ave_Weight_Hist.png)
 
-
+#Conclusions
+- Our data formed 5 clusters based on height & weight 
 
 ´
 
