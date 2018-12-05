@@ -29,6 +29,6 @@ dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', 
 
 # A local image
 ![coats](Dog_coat_variation.png)
-
+![tsneplot]('src/models/)
 
 

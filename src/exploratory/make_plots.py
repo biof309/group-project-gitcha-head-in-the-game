@@ -35,4 +35,9 @@ plt.ylabel('# Dogs')
 plt.title('Average Weight of All Breeds')
 plt.show()
 
+#Make pairplot
+pairplot=sns.pairplot(Characteristics_Total_df)
+plt.suptitle('Dog Breed Characteristics', fontsize=30)
+plt.subplots_adjust(top=1,wspace=.3)
+
 
