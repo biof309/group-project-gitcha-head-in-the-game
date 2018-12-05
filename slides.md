@@ -17,8 +17,13 @@ So we analyzed data about dogs
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
 # Our Data
-![OurData]
-# Added New Columns for Average Height and Weight
+![OurData](Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png)
+
+# Created New Columns for Average Height and Weight
+![AddAve](Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
+
+#Added Columns to Our Data
+![AddCols](Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
 
 #Found Average Height
 - Using np.mean(average_height), we found the average height to be 19.5 inches
