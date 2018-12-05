@@ -59,15 +59,7 @@ So we analyzed data about dogs
 #Histogram of Average Weight
 
 
-# I wanted a picture of a dog here
-![dog](https://img.huffingtonpost.com/asset/5b7fdeab1900001d035028dc.jpeg?cache=sixpwrbb1s&ops=1910_1000)
 
-
-# An interesting image from Wikipedia
-![doggy](https://upload.wikimedia.org/wikipedia/commons/d/d9/Collage_of_Nine_Dogs.jpg)
-
-# A local image
-![coats](Dog_coat_variation.png)
 ´
 
 
