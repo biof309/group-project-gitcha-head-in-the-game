@@ -105,6 +105,36 @@ for x,y,breed in zip(x,y,breedlist):
 
 ![t-SNE](src/visualization/tSNE.png)
 
+
+#We can look at the individual clusters to see which dogs are in them
+
+```python
+plt.scatter(x=cluster0['tsne0'],y=cluster0['tsne1'], alpha=0.5, c='red')
+plt.title('KMeans Cluster 0')
+zip0=zip(list(cluster0.tsne0), list(cluster0.tsne1), list(cluster0.breeds))
+for x,y,breed in zip0:
+    plt.annotate(breed, (x,y), fontsize=6, alpha=0.5)
+plt.savefig('src/visualization/cluster0.png')
+```
+
+![cluster0](src/visualization/cluster0.png)
+
+#
+
+![cluster1](src/visualization/cluster1.png)
+
+#
+
+![cluster2](src/visualization/cluster2.png)
+
+#
+
+![cluster3](src/visualization/cluster3.png)
+
+#
+
+![cluster4](src/visualization/cluster4.png)
+
 #Here are the dogs that were clustered together by the KMearns clustering
 
 ![clusters](src/models/clusters.png)

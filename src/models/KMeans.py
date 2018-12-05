@@ -10,5 +10,5 @@ clusters=kmeans.predict(scaled_features)
 #which breed does each cluster belong to
 breedlist=list(breeds.values.T.flatten())
 clustered_breeds=pd.DataFrame({'clusters':clusters, 'breeds':breedlist})
-clustered_breeds=clustered_breeds.sort_values(by='clusters')
-clustered_breeds.to_csv("clustered_breeds.txt")
+clustered_breeds_sorted=clustered_breeds.sort_values(by='clusters')
+clustered_breeds_sorted.to_csv("clustered_breeds.txt")

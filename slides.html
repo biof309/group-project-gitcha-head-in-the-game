@@ -154,7 +154,9 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 </div>
 <div id="generated-an-exploratory-pair-plot" class="slide section level1">
 <h1>Generated an Exploratory Pair Plot</h1>
-<p><img src="src/visualization/pairplot.png" alt="pairplot" /> - Wanted to take a closer look at the scatter plot and histograms</p>
+<ul>
+<li>Wanted to take a closer look at the scatter plot and histograms <img src="src/visualization/pairplot.png" alt="pairplot" /></li>
+</ul>
 </div>
 <div id="scatter-plot-of-average-height-weight" class="slide section level1">
 <h1>Scatter Plot of Average Height &amp; Weight</h1>
@@ -216,6 +218,47 @@ plt.scatter(x,y, alpha<span class="op">=</span><span class="fl">0.5</span>, c<sp
 <div class="figure">
 <img src="src/visualization/tSNE.png" alt="t-SNE" />
 <p class="caption">t-SNE</p>
+</div>
+</div>
+<div id="we-can-look-at-the-individual-clusters-to-see-which-dogs-are-in-them" class="slide section level1">
+<h1>We can look at the individual clusters to see which dogs are in them</h1>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">plt.scatter(x<span class="op">=</span>cluster0[<span class="st">&#39;tsne0&#39;</span>],y<span class="op">=</span>cluster0[<span class="st">&#39;tsne1&#39;</span>], alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span><span class="st">&#39;red&#39;</span>)
+plt.title(<span class="st">&#39;KMeans Cluster 0&#39;</span>)
+zip0<span class="op">=</span><span class="bu">zip</span>(<span class="bu">list</span>(cluster0.tsne0), <span class="bu">list</span>(cluster0.tsne1), <span class="bu">list</span>(cluster0.breeds))
+<span class="cf">for</span> x,y,breed <span class="kw">in</span> zip0:
+    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">6</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)
+plt.savefig(<span class="st">&#39;src/visualization/cluster0.png&#39;</span>)</code></pre></div>
+<div class="figure">
+<img src="src/visualization/cluster0.png" alt="cluster0" />
+<p class="caption">cluster0</p>
+</div>
+</div>
+<div id="section" class="slide section level1">
+<h1></h1>
+<div class="figure">
+<img src="src/visualization/cluster1.png" alt="cluster1" />
+<p class="caption">cluster1</p>
+</div>
+</div>
+<div id="section-1" class="slide section level1">
+<h1></h1>
+<div class="figure">
+<img src="src/visualization/cluster2.png" alt="cluster2" />
+<p class="caption">cluster2</p>
+</div>
+</div>
+<div id="section-2" class="slide section level1">
+<h1></h1>
+<div class="figure">
+<img src="src/visualization/cluster3.png" alt="cluster3" />
+<p class="caption">cluster3</p>
+</div>
+</div>
+<div id="section-3" class="slide section level1">
+<h1></h1>
+<div class="figure">
+<img src="src/visualization/cluster4.png" alt="cluster4" />
+<p class="caption">cluster4</p>
 </div>
 </div>
 <div id="here-are-the-dogs-that-were-clustered-together-by-the-kmearns-clustering" class="slide section level1">
