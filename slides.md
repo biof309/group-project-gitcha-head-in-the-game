@@ -53,13 +53,17 @@ So we analyzed data about dogs
 - Wanted to take a closer look at the scatter plot and histograms
 
 #Scatter Plot of Average Height & Weight
+![Average Height and Weight](Ave_scatter.png)
 
 #Histogram of Average Height
+![Average Height](Ave_Height_Hist.png')
 
 #Histogram of Average Weight
+![Average Weight](Ave_Weight_Hist.png)
 
 #Conclusions
 - Our data formed 5 clusters based on height & weight 
+- The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever!
 
 ´
 
