@@ -1,4 +1,6 @@
 #Take out column "Breed"
+from src.data.read_data import dogs
+
 characteristics = dogs.iloc[:, 1:]
 
 characteristics_array = characteristics.values
@@ -50,7 +52,8 @@ Characteristics_Total_df = pd.DataFrame(Characteristics_Total, columns = ['Low_H
 print(Characteristics_Total_df)
 
 ax = Characteristics_Total_df.plot()
-fig = ax.get_figure()
+Table = ax.table(cellText=Characteristics_Total_df)
+fig = Table.get_figure()
 fig.savefig('Dog_Data.png')
 
 
