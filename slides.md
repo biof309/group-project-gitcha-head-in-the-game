@@ -104,6 +104,10 @@ for x,y,breed in zip(x,y,breedlist):
 
 ![t-SNE](src/visualization/tSNE.png)
 
+#Here are the dogs that were clustered together by the KMearns clustering
+
+![clusters](src/models/clusters)
+
 #Conclusions
 - Our data formed 5 clusters based on height & weight 
 - The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever!
