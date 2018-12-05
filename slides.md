@@ -56,7 +56,7 @@ So we analyzed data about dogs
 ![Average Height and Weight](Ave_scatter.png)
 
 #Histogram of Average Height
-![Average Height](Ave_Height_Hist.png')
+![Average Height](Ave_Height_Hist.png)
 
 #Histogram of Average Weight
 ![Average Weight](Ave_Weight_Hist.png)
