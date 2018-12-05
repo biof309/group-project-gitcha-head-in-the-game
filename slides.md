@@ -4,6 +4,7 @@
 
 # We Like Dogs
 So we analyzed data about dogs 
+![Buds](https://www.dogster.com/wp-content/uploads/2018/06/A-litter-or-group-of-puppies.jpg)
 
 # Our Data
 ![AKC](https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/10/23104658/AKC_Horizontal_1884_blue.jpg)
@@ -56,7 +57,7 @@ So we analyzed data about dogs
 ![Average Height and Weight](Ave_scatter.png)
 
 #Histogram of Average Height
-![Average Height](Ave_Height_Hist.png')
+![Average Height](Ave_Height_Hist.png)
 
 #Histogram of Average Weight
 ![Average Weight](Ave_Weight_Hist.png)
@@ -64,7 +65,9 @@ So we analyzed data about dogs
 #Conclusions
 - Our data formed 5 clusters based on height & weight 
 - The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever!
+![TechDoggo](https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6)
 
-´
+#Happy Holidays from Gitcha-Head-in-the-Game
+![XmasWeiners](https://www.saveland.ca/kcfinder/upload/images/dachshund-dog-puppy-santa-hat-Favim_com-114928.jpg)
 
 
