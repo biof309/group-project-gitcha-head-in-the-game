@@ -53,7 +53,6 @@ So we analyzed data about dogs
 - Wanted to take a closer look at the scatter plot and histograms
 
 #Scatter Plot of Average Height & Weight
-
 ![Average Height and Weight](Ave_scatter.png)
 
 #Histogram of Average Height
