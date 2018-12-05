@@ -63,6 +63,11 @@ Project Organization
     │       ├── cluster3.png
     │       └── cluster4.png
     │
+    ├──slides.md           <-markdown for slides for project
+    ├──make_slides.py      <-script to product html slides from md
+    ├──slides.html         <-slides for viewing
+    │
+    │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
 
