@@ -54,13 +54,13 @@ So we analyzed data about dogs
 - Wanted to take a closer look at the scatter plot and histograms
 
 #Scatter Plot of Average Height & Weight
-![Average Height and Weight](Ave_scatter.png)
+![Average Height and Weight](src/visualization/Ave_scatter.png)
 
 #Histogram of Average Height
-![Average Height](Ave_Height_Hist.png)
+![Average Height](src/visualization/Ave_Height_Hist.png)
 
 #Histogram of Average Weight
-![Average Weight](Ave_Weight_Hist.png)
+![Average Weight](src/visualization/Ave_Weight_Hist.png)
 
 #We wanted to explore which breeds of dogs would cluster together
 So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
