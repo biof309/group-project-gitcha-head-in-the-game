@@ -63,6 +63,7 @@ So we analyzed data about dogs
 
 #Conclusions
 - Our data formed 5 clusters based on height & weight 
+- The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever!
 
 ´
 
