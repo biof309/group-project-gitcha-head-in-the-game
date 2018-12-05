@@ -17,7 +17,7 @@ So we analyzed data about dogs
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
 # Our Data
-
+![OurData]
 # Added New Columns for Average Height and Weight
 
 #Found Average Height
