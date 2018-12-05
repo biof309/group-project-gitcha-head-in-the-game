@@ -1,3 +1,4 @@
+from sklearn.cluster import KMeans
 #create instance of KMeans clusters
 kmeans=KMeans(n_clusters=5)
 

@@ -49,7 +49,8 @@ So we analyzed data about dogs
 ![rollyboi](https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP)
 
 
-# Generated an Exploratory Pear Plot
+# Generated an Exploratory Pair Plot
+![pairplot](src/visualization/pairplot.png)
 - Wanted to take a closer look at the scatter plot and histograms
 
 #Scatter Plot of Average Height & Weight
@@ -60,6 +61,50 @@ So we analyzed data about dogs
 
 #Histogram of Average Weight
 ![Average Weight](Ave_Weight_Hist.png)
+
+#We wanted to explore which breeds of dogs would cluster together
+So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
+```python
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+#scale
+scaler=StandardScaler()
+scaled_features=scaler.fit_transform(feature_array)
+
+#create instance of KMeans clusters
+kmeans=KMeans(n_clusters=5)
+
+#fit to data
+kmeans.fit(scaled_features)
+#predict clusters
+clusters=kmeans.predict(scaled_features)
+``` 
+
+#We wanted to plot these clusters
+We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters. 
+
+```python
+from matplotlib import cm
+from sklearn.manifold import TSNE
+#create instance of t-SNE
+tsne=TSNE(learning_rate=100)
+#fit t-SNE featres
+tsne_features=tsne.fit_transform(scaled_features)
+```
+
+#Here is our final t-SNE plot
+```python
+breedlist=list(breeds.values.T.flatten())
+unique_clusters=list(set(clusters))
+cmap=cm.get_cmap("viridis",5)
+plt.scatter(x,y, alpha=0.5, c=clusters, label=unique_clusters, cmap=cmap, vmin=-0.5, vmax=4.4)
+c=plt.colorbar(ticks=unique_clusters)
+c.set_label('KMeans clusters')
+plt.title('T-SNE Plot of Dog Breeds')
+for x,y,breed in zip(x,y,breedlist):
+    plt.annotate(breed, (x,y), fontsize=4, alpha=0.5)
+```
+![t-SNE](src/visualization/tSNE.png)
 
 #Conclusions
 - Our data formed 5 clusters based on height & weight 
