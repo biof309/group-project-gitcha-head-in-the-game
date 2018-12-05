@@ -40,14 +40,95 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <div id="unicode-error-importing-our-data" class="slide section level1">
 <h1>Unicode Error Importing Our Data</h1>
 <ul>
-<li>Used Pandas (pd.read.csv)</li>
+<li>Used Pandas (pd.read_csv())</li>
 <li>But our csv file was a &quot;Latin1&quot; file or a &quot;ISO-8859-1&quot; file</li>
-<li>Converted to UTF-8, the standard file type</li>
+<li>Added an argument to our read_csv() function that included the encoding information and eliminated the error</li>
 </ul>
 </div>
 <div id="our-data-1" class="slide section level1">
 <h1>Our Data</h1>
-<p>dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding=&quot;ISO-8859-1&quot;)</p>
+<div class="figure">
+<img src="Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png" alt="OurData" />
+<p class="caption">OurData</p>
+</div>
+</div>
+<div id="created-new-columns-for-average-height-and-weight" class="slide section level1">
+<h1>Created New Columns for Average Height and Weight</h1>
+<div class="figure">
+<img src="Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png" alt="AddAve" />
+<p class="caption">AddAve</p>
+</div>
+</div>
+<div id="added-columns-to-our-data" class="slide section level1">
+<h1>Added Columns to Our Data</h1>
+<div class="figure">
+<img src="Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png" alt="AddCols" />
+<p class="caption">AddCols</p>
+</div>
+</div>
+<div id="found-average-height" class="slide section level1">
+<h1>Found Average Height</h1>
+<ul>
+<li>Using np.mean(average_height), we found the average height to be 19.5 inches</li>
+<li>Which is equivalent to the average heights of these good bois:</li>
+</ul>
+</div>
+<div id="kerry-blue-terrior" class="slide section level1">
+<h1>Kerry Blue Terrior</h1>
+<div class="figure">
+<img src="https://minepuppy.com/wp-content/uploads/2018/03/Kerry-Blue-Terrier-breed-silver-minepuppy.jpg" alt="beardbois" />
+<p class="caption">beardbois</p>
+</div>
+</div>
+<div id="chesapeake-bay-retriever" class="slide section level1">
+<h1>Chesapeake Bay Retriever</h1>
+<div class="figure">
+<img src="https://vetstreet.brightspotcdn.com/dims4/default/3e810eb/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F96%2F97e4009e9411e0a2380050568d634f%2Ffile%2FChesapeake-Bay-Retriever-4-645mk062111.jpg" alt="frens" />
+<p class="caption">frens</p>
+</div>
+</div>
+<div id="found-average-weight" class="slide section level1">
+<h1>Found Average Weight</h1>
+<ul>
+<li>Using np.mean(average_weight), we found the average weight to be 50.35lbs</li>
+<li>Which is equivalent to the average weights of these doggos:</li>
+</ul>
+</div>
+<div id="samoyed" class="slide section level1">
+<h1>Samoyed</h1>
+<div class="figure">
+<img src="https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg" alt="floof" />
+<p class="caption">floof</p>
+</div>
+</div>
+<div id="dalmation" class="slide section level1">
+<h1>Dalmation</h1>
+<div class="figure">
+<img src="https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg" alt="spottyboi" />
+<p class="caption">spottyboi</p>
+</div>
+</div>
+<div id="chinese-shar-pei" class="slide section level1">
+<h1>Chinese Shar Pei</h1>
+<div class="figure">
+<img src="https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP" alt="rollyboi" />
+<p class="caption">rollyboi</p>
+</div>
+</div>
+<div id="generated-an-exploratory-pear-plot" class="slide section level1">
+<h1>Generated an Exploratory Pear Plot</h1>
+<ul>
+<li>Wanted to take a closer look at the scatter plot and histograms</li>
+</ul>
+</div>
+<div id="scatter-plot-of-average-height-weight" class="slide section level1">
+<h1>Scatter Plot of Average Height &amp; Weight</h1>
+</div>
+<div id="histogram-of-average-height" class="slide section level1">
+<h1>Histogram of Average Height</h1>
+</div>
+<div id="histogram-of-average-weight" class="slide section level1">
+<h1>Histogram of Average Weight</h1>
 </div>
 <div id="i-wanted-a-picture-of-a-dog-here" class="slide section level1">
 <h1>I wanted a picture of a dog here</h1>
@@ -65,10 +146,7 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 </div>
 <div id="a-local-image" class="slide section level1">
 <h1>A local image</h1>
-<div class="figure">
-<img src="Dog_coat_variation.png" alt="coats" />
-<p class="caption">coats</p>
-</div>
+<p><img src="Dog_coat_variation.png" alt="coats" /> ´</p>
 </div>
 </body>
 </html>

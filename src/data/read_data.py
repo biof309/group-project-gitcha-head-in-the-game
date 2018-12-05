@@ -13,6 +13,9 @@ dogs.shape
 dogs= dogs.dropna()
 dogs.shape
 
+print(dogs)
+
+
 
 
 
