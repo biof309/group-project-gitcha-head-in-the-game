@@ -8,47 +8,78 @@
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers" />
   <title>Brief Analysis of Doggo Height &amp; Weight by Breed</title>
-  <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code > span.dt { color: #902000; } /* DataType */
-code > span.dv { color: #40a070; } /* DecVal */
-code > span.bn { color: #40a070; } /* BaseN */
-code > span.fl { color: #40a070; } /* Float */
-code > span.ch { color: #4070a0; } /* Char */
-code > span.st { color: #4070a0; } /* String */
-code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code > span.ot { color: #007020; } /* Other */
-code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code > span.fu { color: #06287e; } /* Function */
-code > span.er { color: #ff0000; font-weight: bold; } /* Error */
-code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #880000; } /* Constant */
-code > span.sc { color: #4070a0; } /* SpecialChar */
-code > span.vs { color: #4070a0; } /* VerbatimString */
-code > span.ss { color: #bb6688; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #19177c; } /* Variable */
-code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #666666; } /* Operator */
-code > span.bu { } /* BuiltIn */
-code > span.ex { } /* Extension */
-code > span.pp { color: #bc7a00; } /* Preprocessor */
-code > span.at { color: #7d9029; } /* Attribute */
-code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
-    href="http://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
-  <script src="http://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
@@ -78,10 +109,10 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <h1>Unicode Error Importing Our Data</h1>
 <ul>
 <li>Used Pandas (pd.read_csv())</li>
-<li>But our csv file was a &quot;Latin1&quot; file or a &quot;ISO-8859-1&quot; file</li>
+<li>But our csv file was a “Latin1” file or a “ISO-8859-1” file</li>
 <li>Added an argument to our read_csv() function that included the encoding information and eliminated the error <img src="https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6" alt="TechDoggo" /></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">dogs <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs&#39;</span>, encoding<span class="op">=</span><span class="st">&quot;ISO-8859-1&quot;</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1">dogs <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs&#39;</span>, encoding<span class="op">=</span><span class="st">&quot;ISO-8859-1&quot;</span>)</a></code></pre></div>
 </div>
 <div id="our-data-1" class="slide section level1">
 <h1>Our Data</h1>
@@ -127,150 +158,95 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 </div>
 <div id="histogram-of-average-height" class="slide section level1">
 <h1>Histogram of Average Height</h1>
-<div class="figure">
-<img src="src/visualization/Ave_Height_Hist.png" />
-
-</div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histogram average height</span>
-<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
-Ave_Height_Hist<span class="op">=</span> plt.hist(Ave_Heights_Weights[:,<span class="dv">0</span>],color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, bins<span class="op">=</span><span class="dv">20</span>)
-<span class="co"># Axis Labels </span>
-plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)
-plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
-plt.title(<span class="st">&#39;Average Height of All Breeds&#39;</span>)
-<span class="co"># Save Image </span>
-plt.savefig(<span class="st">&#39;Ave_Height_Hist.png&#39;</span>)</code></pre></div>
-</div>
-<div id="found-average-weight" class="slide section level1">
-<h1>Found Average Weight</h1>
-<ul>
-<li>Using np.mean(average_weight), we found the average weight to be 50.35lbs</li>
-<li>Which is equivalent to the average weights of these doggos:</li>
-</ul>
-</div>
-<div id="samoyed" class="slide section level1">
-<h1>Samoyed</h1>
-<div class="figure">
-<img src="https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg" alt="floof" />
-<p class="caption">floof</p>
-</div>
-</div>
-<div id="dalmation" class="slide section level1">
-<h1>Dalmation</h1>
-<div class="figure">
-<img src="https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg" alt="spottyboi" />
-<p class="caption">spottyboi</p>
-</div>
-</div>
-<div id="chinese-shar-pei" class="slide section level1">
-<h1>Chinese Shar Pei</h1>
-<div class="figure">
-<img src="https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP" alt="rollyboi" />
-<p class="caption">rollyboi</p>
-</div>
-</div>
-<div id="histogram-of-average-weight" class="slide section level1">
-<h1>Histogram of Average Weight</h1>
-<div class="figure">
-<img src="src/visualization/Ave_Weight_Hist.png" />
-
-</div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histagram of Average Weight</span>
-<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
-Ave_Weight_Hist<span class="op">=</span>plt.hist(Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&quot;skyblue&quot;</span>, bins<span class="op">=</span><span class="dv">20</span>, )
-<span class="co">#Axis Labels</span>
-plt.xlabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)
-plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
-plt.title(<span class="st">&#39;Average Weight of All Breeds&#39;</span>)
-<span class="co"># Save Image </span>
-plt.savefig(<span class="st">&#39;Ave_Weight_Hist.png&#39;</span>)</code></pre></div>
+<p><img src="src/visualization/Ave_Height_Hist.png" /></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Make Histogram average height</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">Ave_Height_Hist<span class="op">=</span> plt.hist(Ave_Heights_Weights[:,<span class="dv">0</span>],color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, bins<span class="op">=</span><span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># Axis Labels </span></a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7">plt.title(<span class="st">&#39;Average Height of All Breeds&#39;</span>)</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co"># Save Image </span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">plt.savefig(<span class="st">&#39;Ave_Height_Hist.png&#39;</span>)</a></code></pre></div>
+<p>#Found Average Weight - Using np.mean(average_weight), we found the average weight to be 50.35lbs - Which is equivalent to the average weights of these doggos:</p>
+<p>#Samoyed <img src="https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg" alt="floof" /></p>
+<p>#Dalmation <img src="https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg" alt="spottyboi" /></p>
+<p>#Chinese Shar Pei <img src="https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP" alt="rollyboi" /></p>
+<p>#Histogram of Average Weight <img src="src/visualization/Ave_Weight_Hist.png" /></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Make Histagram of Average Weight</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">Ave_Weight_Hist<span class="op">=</span>plt.hist(Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&quot;skyblue&quot;</span>, bins<span class="op">=</span><span class="dv">20</span>, )</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#Axis Labels</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">plt.xlabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6">plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)</a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">plt.title(<span class="st">&#39;Average Weight of All Breeds&#39;</span>)</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co"># Save Image </span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">plt.savefig(<span class="st">&#39;Ave_Weight_Hist.png&#39;</span>)</a></code></pre></div>
 </div>
 <div id="generated-an-exploratory-pair-plot" class="slide section level1">
 <h1>Generated an Exploratory Pair Plot</h1>
 <ul>
 <li>Wanted to take a closer look at the scatter plot and histograms <img src="src/visualization/pairplot.png" alt="pairplot" /></li>
 </ul>
-</div>
-<div id="scatter-plot-of-average-height-weight" class="slide section level1">
-<h1>Scatter Plot of Average Height &amp; Weight</h1>
-<div class="figure">
-<img src="src/visualization/Ave_scatter.png" />
-
-</div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co">#Make Scatter Plot</span>
-<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
-<span class="im">import</span> matplotlib.pylab <span class="im">as</span> plb
-Ave_scatter<span class="op">=</span> plt.scatter(Ave_Heights_Weights[:,<span class="dv">0</span>], Ave_Heights_Weights[:,<span class="dv">1</span>], s<span class="op">=</span>[<span class="dv">70</span>], marker<span class="op">=</span><span class="st">&#39;*&#39;</span>,color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>)
-<span class="co">#label axis</span>
-plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)
-plt.ylabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)
-plt.title(<span class="st">&#39;Average Height and Weight of All Breeds&#39;</span>)
-<span class="co"># Set axis limits</span>
-plt.xlim(<span class="dv">1</span>, <span class="dv">60</span>)
-plt.ylim(<span class="dv">1</span>, <span class="dv">190</span>)
-<span class="co"># Add trendline</span>
-z <span class="op">=</span> np.polyfit(Ave_Heights_Weights[:,<span class="dv">0</span>], Ave_Heights_Weights[:,<span class="dv">1</span>],<span class="dv">1</span>)
-p <span class="op">=</span> np.poly1d(z)
-plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), <span class="st">&#39;m--&#39;</span>)
-<span class="co">#save figure</span>
-plt.savefig(<span class="st">&#39;Ave_scatter.png&#39;</span>)</code></pre></div>
-</div>
-<div id="the-outlier" class="slide section level1">
-<h1>The Outlier</h1>
-<div class="figure">
-<img src="https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg" alt="MrLongLegs" />
-<p class="caption">MrLongLegs</p>
-</div>
-</div>
-<div id="we-wanted-to-explore-which-breeds-of-dogs-would-cluster-together" class="slide section level1">
-<h1>We wanted to explore which breeds of dogs would cluster together</h1>
-<p>So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans
-<span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler
-<span class="co">#scale</span>
-scaler<span class="op">=</span>StandardScaler()
-scaled_features<span class="op">=</span>scaler.fit_transform(feature_array)
-
-<span class="co">#create instance of KMeans clusters</span>
-kmeans<span class="op">=</span>KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>)
-
-<span class="co">#fit to data</span>
-kmeans.fit(scaled_features)
-<span class="co">#predict clusters</span>
-clusters<span class="op">=</span>kmeans.predict(scaled_features)</code></pre></div>
-</div>
-<div id="we-wanted-to-plot-these-clusters" class="slide section level1">
-<h1>We wanted to plot these clusters</h1>
-<p>We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters.</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE
-<span class="co">#create instance of t-SNE</span>
-tsne<span class="op">=</span>TSNE(learning_rate<span class="op">=</span><span class="dv">100</span>)
-<span class="co">#fit t-SNE featres</span>
-tsne_features<span class="op">=</span>tsne.fit_transform(scaled_features)breedlist<span class="op">=</span><span class="bu">list</span>(breeds.values.T.flatten())
-
-<span class="co">##make plot</span>
-
-unique_clusters<span class="op">=</span><span class="bu">list</span>(<span class="bu">set</span>(clusters))  <span class="co">#cluster labels</span>
-cmap<span class="op">=</span>cm.get_cmap(<span class="st">&quot;viridis&quot;</span>,<span class="dv">5</span>)  <span class="co">#color map</span>
-plt.scatter(x,y, alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span>clusters, label<span class="op">=</span>unique_clusters, cmap<span class="op">=</span>cmap, vmin<span class="op">=-</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="fl">4.4</span>) <span class="co">#make graph</span>
-<span class="cf">for</span> x,y,breed <span class="kw">in</span> <span class="bu">zip</span>(x,y,breedlist):
-    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">4</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)  <span class="co">#add labels</span></code></pre></div>
-</div>
-<div id="here-is-our-final-t-sne-plot" class="slide section level1">
-<h1>Here is our final t-SNE plot</h1>
+<p>#Scatter Plot of Average Height &amp; Weight <img src="src/visualization/Ave_scatter.png" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">#Make Scatter Plot</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plb</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">Ave_scatter<span class="op">=</span> plt.scatter(Ave_Heights_Weights[:,<span class="dv">0</span>], Ave_Heights_Weights[:,<span class="dv">1</span>], s<span class="op">=</span>[<span class="dv">70</span>], marker<span class="op">=</span><span class="st">&#39;*&#39;</span>,color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>)</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#label axis</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">plt.ylabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">plt.title(<span class="st">&#39;Average Height and Weight of All Breeds&#39;</span>)</a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co"># Set axis limits</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">plt.xlim(<span class="dv">1</span>, <span class="dv">60</span>)</a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">plt.ylim(<span class="dv">1</span>, <span class="dv">190</span>)</a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co"># Add trendline</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">z <span class="op">=</span> np.polyfit(Ave_Heights_Weights[:,<span class="dv">0</span>], Ave_Heights_Weights[:,<span class="dv">1</span>],<span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">p <span class="op">=</span> np.poly1d(z)</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15">plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), <span class="st">&#39;m--&#39;</span>)</a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#save figure</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17">plt.savefig(<span class="st">&#39;Ave_scatter.png&#39;</span>)</a></code></pre></div>
+<p>#The Outlier <img src="https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg" alt="MrLongLegs" /></p>
+<p>#We wanted to explore which breeds of dogs would cluster together So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#scale</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">scaler<span class="op">=</span>StandardScaler()</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">scaled_features<span class="op">=</span>scaler.fit_transform(feature_array)</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#create instance of KMeans clusters</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">kmeans<span class="op">=</span>KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#fit to data</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">kmeans.fit(scaled_features)</a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#predict clusters</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">clusters<span class="op">=</span>kmeans.predict(scaled_features)</a></code></pre></div>
+<p>#We wanted to plot these clusters We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#create instance of t-SNE</span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">tsne<span class="op">=</span>TSNE(learning_rate<span class="op">=</span><span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#fit t-SNE featres</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">tsne_features<span class="op">=</span>tsne.fit_transform(scaled_features)breedlist<span class="op">=</span><span class="bu">list</span>(breeds.values.T.flatten())</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">##make plot</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">unique_clusters<span class="op">=</span><span class="bu">list</span>(<span class="bu">set</span>(clusters))  <span class="co">#cluster labels</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">cmap<span class="op">=</span>cm.get_cmap(<span class="st">&quot;viridis&quot;</span>,<span class="dv">5</span>)  <span class="co">#color map</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">plt.scatter(x,y, alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span>clusters, label<span class="op">=</span>unique_clusters, cmap<span class="op">=</span>cmap, vmin<span class="op">=-</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="fl">4.4</span>) <span class="co">#make graph</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="cf">for</span> x,y,breed <span class="kw">in</span> <span class="bu">zip</span>(x,y,breedlist):</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">4</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)  <span class="co">#add labels</span></a></code></pre></div>
+<p>#Here is our final t-SNE plot</p>
 <div class="figure">
 <img src="src/visualization/tSNE.png" alt="t-SNE" />
 <p class="caption">t-SNE</p>
 </div>
-</div>
-<div id="we-can-look-at-the-individual-clusters-to-see-which-dogs-are-in-them" class="slide section level1">
-<h1>We can look at the individual clusters to see which dogs are in them</h1>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">plt.scatter(x<span class="op">=</span>cluster0[<span class="st">&#39;tsne0&#39;</span>],y<span class="op">=</span>cluster0[<span class="st">&#39;tsne1&#39;</span>], alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span><span class="st">&#39;red&#39;</span>)
-plt.title(<span class="st">&#39;KMeans Cluster 0&#39;</span>)
-zip0<span class="op">=</span><span class="bu">zip</span>(<span class="bu">list</span>(cluster0.tsne0), <span class="bu">list</span>(cluster0.tsne1), <span class="bu">list</span>(cluster0.breeds))
-<span class="cf">for</span> x,y,breed <span class="kw">in</span> zip0:
-    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">6</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)
-plt.savefig(<span class="st">&#39;src/visualization/cluster0.png&#39;</span>)</code></pre></div>
+<p>#We can look at the individual clusters to see which dogs are in them</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" data-line-number="1">plt.scatter(x<span class="op">=</span>cluster0[<span class="st">&#39;tsne0&#39;</span>],y<span class="op">=</span>cluster0[<span class="st">&#39;tsne1&#39;</span>], alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span><span class="st">&#39;red&#39;</span>)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">plt.title(<span class="st">&#39;KMeans Cluster 0&#39;</span>)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">zip0<span class="op">=</span><span class="bu">zip</span>(<span class="bu">list</span>(cluster0.tsne0), <span class="bu">list</span>(cluster0.tsne1), <span class="bu">list</span>(cluster0.breeds))</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="cf">for</span> x,y,breed <span class="kw">in</span> zip0:</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">6</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">plt.savefig(<span class="st">&#39;src/visualization/cluster0.png&#39;</span>)</a></code></pre></div>
 <div class="figure">
 <img src="src/visualization/cluster0.png" alt="cluster0" />
 <p class="caption">cluster0</p>
@@ -303,27 +279,13 @@ plt.savefig(<span class="st">&#39;src/visualization/cluster0.png&#39;</span>)</c
 <img src="src/visualization/cluster4.png" alt="cluster4" />
 <p class="caption">cluster4</p>
 </div>
-</div>
-<div id="here-are-the-dogs-that-were-clustered-together-by-the-kmearns-clustering" class="slide section level1">
-<h1>Here are the dogs that were clustered together by the KMearns clustering</h1>
+<p>#Here are the dogs that were clustered together by the KMearns clustering</p>
 <div class="figure">
 <img src="src/models/clusters.png" alt="clusters" />
 <p class="caption">clusters</p>
 </div>
-</div>
-<div id="conclusions" class="slide section level1">
-<h1>Conclusions</h1>
-<ul>
-<li>Our data formed 5 clusters based on height &amp; weight</li>
-<li>The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever! <img src="http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Chesapeake-Bay-Retriever-1.jpg" alt="Averageboi" /></li>
-</ul>
-</div>
-<div id="happy-holidays-from-gitcha-head-in-the-game" class="slide section level1">
-<h1>Happy Holidays from Gitcha-Head-in-the-Game</h1>
-<div class="figure">
-<img src="https://www.saveland.ca/kcfinder/upload/images/dachshund-dog-puppy-santa-hat-Favim_com-114928.jpg" alt="XmasWeiners" />
-<p class="caption">XmasWeiners</p>
-</div>
+<p>#Conclusions - Our data formed 5 clusters based on height &amp; weight - The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever! <img src="http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Chesapeake-Bay-Retriever-1.jpg" alt="Averageboi" /></p>
+<p>#Happy Holidays from Gitcha-Head-in-the-Game <img src="https://www.saveland.ca/kcfinder/upload/images/dachshund-dog-puppy-santa-hat-Favim_com-114928.jpg" alt="XmasWeiners" /></p>
 </div>
 </body>
 </html>
