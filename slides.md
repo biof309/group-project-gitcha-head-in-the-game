@@ -1,6 +1,6 @@
 %Brief Analysis of Doggo Height & Weight by Breed
-%Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
-%12-11-2018
+%%Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+%%%12-11-2018
 
 # We Like Dogs
 So we analyzed data about dogs 
