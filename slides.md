@@ -1,6 +1,7 @@
 % Brief Analysis of Doggo Height & Weight by Breed
 % Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 % 12-11-2018
+![TechDoggo](https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6)
 
 # We Like Dogs
 So we analyzed data about dogs 
@@ -185,10 +186,6 @@ plt.savefig('src/visualization/cluster0.png')
 - Our data formed 5 clusters based on height & weight 
 - The average height was 19.5 inches and the average weight was 50.35 pounds, which is the average size of a Chesapeake Bay Retriever!
 ![Averageboi](http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Chesapeake-Bay-Retriever-1.jpg)
-
-#One More
-
-![TechDoggo](https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6)
 
 #Happy Holidays from Gitcha-Head-in-the-Game
 ![XmasWeiners](https://www.saveland.ca/kcfinder/upload/images/dachshund-dog-puppy-santa-hat-Favim_com-114928.jpg)
