@@ -110,6 +110,8 @@ plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
 #save figure
 plt.savefig('Ave_scatter.png')
 ```
+#The Outlier
+![MrLongLegs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)
 
 #We wanted to explore which breeds of dogs would cluster together
 So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
