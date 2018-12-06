@@ -31,19 +31,24 @@ dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', 
 ![AddAve](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
 
 # Added Columns to Our Data
+
 ![AddCols](src/dog_pictures/Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
 
 # Found Average Height
+
 - Using np.mean(average_height), we found the average height to be 19.5 inches
 - Which is equivalent to the average heights of these good bois:
 
 # Kerry Blue Terrior
+
 ![beardbois](https://minepuppy.com/wp-content/uploads/2018/03/Kerry-Blue-Terrier-breed-silver-minepuppy.jpg)
 
 # Chesapeake Bay Retriever
+
 ![frens](https://vetstreet.brightspotcdn.com/dims4/default/3e810eb/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F96%2F97e4009e9411e0a2380050568d634f%2Ffile%2FChesapeake-Bay-Retriever-4-645mk062111.jpg)
 
 # Histogram of Average Height
+
 ![](src/visualization/Ave_Height_Hist.png)
 ```python
 # Make Histogram average height
@@ -58,20 +63,25 @@ plt.savefig('Ave_Height_Hist.png')
 ```
 
 #Found Average Weight
+
 - Using np.mean(average_weight), we found the average weight to be 50.35lbs
 - Which is equivalent to the average weights of these doggos:
 
 #Samoyed
+
 ![floof](https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg)
 
 #Dalmation
+
 ![spottyboi](https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg)
 
 #Chinese Shar Pei
+
 ![rollyboi](https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP)
 
 
 #Histogram of Average Weight
+
 ![](src/visualization/Ave_Weight_Hist.png)
 ```python
 # Make Histagram of Average Weight
@@ -86,11 +96,14 @@ plt.savefig('Ave_Weight_Hist.png')
 ```
 
 # Generated an Exploratory Pair Plot
+
 - Wanted to take a closer look at the scatter plot and histograms
+
 ![pairplot](src/visualization/pairplot.png)
 
 
 #Scatter Plot of Average Height & Weight
+
 ![](src/visualization/Ave_scatter.png)
 ```python
 #Make Scatter Plot
@@ -111,14 +124,19 @@ plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
 #save figure
 plt.savefig('Ave_scatter.png')
 ```
+
 #The Outlier
+
 ![MrLongLegs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)
 
+
 # Vizsla 
+
 ![Mr. long legs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)
 
 
 #We wanted to explore which breeds of dogs would cluster together
+
 So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
 ```python
 from sklearn.cluster import KMeans
@@ -137,6 +155,7 @@ clusters=kmeans.predict(scaled_features)
 ``` 
 
 #We wanted to plot these clusters
+
 We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters. 
 
 ```python
