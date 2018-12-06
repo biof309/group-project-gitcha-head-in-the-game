@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <meta name="author" content="Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers" />
+  <meta name="author" content="%Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers" />
   <title>Brief Analysis of Doggo Height &amp; Weight by Breed</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
@@ -55,9 +55,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="slide titlepage">
   <h1 class="title">Brief Analysis of Doggo Height &amp; Weight by Breed</h1>
   <p class="author">
-Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+%Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
   </p>
-  <p class="date">12-11-2018</p>
+  <p class="date">%%12-11-2018</p>
 </div>
 <div id="we-like-dogs" class="slide section level1">
 <h1>We Like Dogs</h1>
@@ -81,8 +81,7 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <li>But our csv file was a &quot;Latin1&quot; file or a &quot;ISO-8859-1&quot; file</li>
 <li>Added an argument to our read_csv() function that included the encoding information and eliminated the error <img src="https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6" alt="TechDoggo" /></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">dogs <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs&#39;</span>, encoding<span class="op">=</span><span class="st">&quot;ISO-8859-1&quot;</span>)
-dogs.head()</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">dogs <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs&#39;</span>, encoding<span class="op">=</span><span class="st">&quot;ISO-8859-1&quot;</span>)</code></pre></div>
 </div>
 <div id="our-data-1" class="slide section level1">
 <h1>Our Data</h1>
