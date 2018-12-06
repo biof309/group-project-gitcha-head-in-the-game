@@ -125,6 +125,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p class="caption">frens</p>
 </div>
 </div>
+<div id="histogram-of-average-height" class="slide section level1">
+<h1>Histogram of Average Height</h1>
+<div class="figure">
+<img src="src/visualization/Ave_Height_Hist.png" />
+
+</div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histogram average height</span>
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+Ave_Height_Hist<span class="op">=</span> plt.hist(Ave_Heights_Weights[:,<span class="dv">0</span>],color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, bins<span class="op">=</span><span class="dv">20</span>)
+<span class="co"># Axis Labels </span>
+plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)
+plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
+plt.title(<span class="st">&#39;Average Height of All Breeds&#39;</span>)
+<span class="co"># Save Image </span>
+plt.savefig(<span class="st">&#39;Ave_Height_Hist.png&#39;</span>)</code></pre></div>
+</div>
 <div id="found-average-weight" class="slide section level1">
 <h1>Found Average Weight</h1>
 <ul>
@@ -152,6 +168,22 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <img src="https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP" alt="rollyboi" />
 <p class="caption">rollyboi</p>
 </div>
+</div>
+<div id="histogram-of-average-weight" class="slide section level1">
+<h1>Histogram of Average Weight</h1>
+<div class="figure">
+<img src="src/visualization/Ave_Weight_Hist.png" />
+
+</div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histagram of Average Weight</span>
+<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
+Ave_Weight_Hist<span class="op">=</span>plt.hist(Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&quot;skyblue&quot;</span>, bins<span class="op">=</span><span class="dv">20</span>, )
+<span class="co">#Axis Labels</span>
+plt.xlabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)
+plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
+plt.title(<span class="st">&#39;Average Weight of All Breeds&#39;</span>)
+<span class="co"># Save Image </span>
+plt.savefig(<span class="st">&#39;Ave_Weight_Hist.png&#39;</span>)</code></pre></div>
 </div>
 <div id="generated-an-exploratory-pair-plot" class="slide section level1">
 <h1>Generated an Exploratory Pair Plot</h1>
@@ -182,38 +214,6 @@ p <span class="op">=</span> np.poly1d(z)
 plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), <span class="st">&#39;m--&#39;</span>)
 <span class="co">#save figure</span>
 plt.savefig(<span class="st">&#39;Ave_scatter.png&#39;</span>)</code></pre></div>
-</div>
-<div id="histogram-of-average-height" class="slide section level1">
-<h1>Histogram of Average Height</h1>
-<div class="figure">
-<img src="src/visualization/Ave_Height_Hist.png" />
-
-</div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histogram average height</span>
-<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
-Ave_Height_Hist<span class="op">=</span> plt.hist(Ave_Heights_Weights[:,<span class="dv">0</span>],color<span class="op">=</span><span class="st">&#39;skyblue&#39;</span>, bins<span class="op">=</span><span class="dv">20</span>)
-<span class="co"># Axis Labels </span>
-plt.xlabel(<span class="st">&#39;Average Height (Inches)&#39;</span>)
-plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
-plt.title(<span class="st">&#39;Average Height of All Breeds&#39;</span>)
-<span class="co"># Save Image </span>
-plt.savefig(<span class="st">&#39;Ave_Height_Hist.png&#39;</span>)</code></pre></div>
-</div>
-<div id="histogram-of-average-weight" class="slide section level1">
-<h1>Histogram of Average Weight</h1>
-<div class="figure">
-<img src="src/visualization/Ave_Weight_Hist.png" />
-
-</div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># Make Histagram of Average Weight</span>
-<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
-Ave_Weight_Hist<span class="op">=</span>plt.hist(Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&quot;skyblue&quot;</span>, bins<span class="op">=</span><span class="dv">20</span>, )
-<span class="co">#Axis Labels</span>
-plt.xlabel(<span class="st">&#39;Average Weight (lbs)&#39;</span>)
-plt.ylabel(<span class="st">&#39;# Dogs&#39;</span>)
-plt.title(<span class="st">&#39;Average Weight of All Breeds&#39;</span>)
-<span class="co"># Save Image </span>
-plt.savefig(<span class="st">&#39;Ave_Weight_Hist.png&#39;</span>)</code></pre></div>
 </div>
 <div id="we-wanted-to-explore-which-breeds-of-dogs-would-cluster-together" class="slide section level1">
 <h1>We wanted to explore which breeds of dogs would cluster together</h1>

@@ -1,7 +1,6 @@
-# Brief Analysis of Doggo Height & Weight by Breed
-###Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
-###12-11-2018
-![TechDoggo](https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6)
+%Brief Analysis of Doggo Height & Weight by Breed
+%Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+%12-11-2018
 
 # We Like Dogs
 So we analyzed data about dogs 
@@ -17,6 +16,7 @@ So we analyzed data about dogs
 - Used Pandas (pd.read_csv())
 - But our csv file was a "Latin1" file or a "ISO-8859-1" file
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
+![TechDoggo](https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6)
 
 ```python
 dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding="ISO-8859-1")
