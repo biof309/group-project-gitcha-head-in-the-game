@@ -17,6 +17,11 @@ So we analyzed data about dogs
 - But our csv file was a "Latin1" file or a "ISO-8859-1" file
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
+```python
+dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', encoding="ISO-8859-1")
+dogs.head()
+```
+
 # Our Data
 ![OurData](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png)
 
