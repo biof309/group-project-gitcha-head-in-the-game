@@ -1,6 +1,7 @@
-%Brief Analysis of Doggo Height & Weight by Breed
-%Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
-%12-11-2018
+% Brief Analysis of Doggo Height & Weight by Breed
+% Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+% 12-11-2018
+
 
 # We Like Dogs
 So we analyzed data about dogs 
@@ -29,20 +30,20 @@ dogs = pd.read_csv('https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs', 
 # Created New Columns for Average Height and Weight
 ![AddAve](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
 
-#Added Columns to Our Data
+# Added Columns to Our Data
 ![AddCols](src/dog_pictures/Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
 
-#Found Average Height
+# Found Average Height
 - Using np.mean(average_height), we found the average height to be 19.5 inches
 - Which is equivalent to the average heights of these good bois:
 
-#Kerry Blue Terrior
+# Kerry Blue Terrior
 ![beardbois](https://minepuppy.com/wp-content/uploads/2018/03/Kerry-Blue-Terrier-breed-silver-minepuppy.jpg)
 
-#Chesapeake Bay Retriever
+# Chesapeake Bay Retriever
 ![frens](https://vetstreet.brightspotcdn.com/dims4/default/3e810eb/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F96%2F97e4009e9411e0a2380050568d634f%2Ffile%2FChesapeake-Bay-Retriever-4-645mk062111.jpg)
 
-#Histogram of Average Height
+# Histogram of Average Height
 ![](src/visualization/Ave_Height_Hist.png)
 ```python
 # Make Histogram average height
@@ -110,6 +111,8 @@ plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
 #save figure
 plt.savefig('Ave_scatter.png')
 ```
+#The Outlier
+![MrLongLegs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)
 
 # Vizsla 
 ![Mr. long legs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)

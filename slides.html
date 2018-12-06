@@ -6,7 +6,8 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title></title>
+  <meta name="author" content="Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers" />
+  <title>Brief Analysis of Doggo Height &amp; Weight by Breed</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -51,14 +52,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
-<div id="brief-analysis-of-doggo-height-weight-by-breed" class="slide section level1">
-<h1>Brief Analysis of Doggo Height &amp; Weight by Breed</h1>
-<h3 id="kaite-donahue-micaela-mccall-libby-aliberti-mia-sievers">Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers</h3>
-<h3 id="section">12-11-2018</h3>
-<div class="figure">
-<img src="https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6" alt="TechDoggo" />
-<p class="caption">TechDoggo</p>
-</div>
+<div class="slide titlepage">
+  <h1 class="title">Brief Analysis of Doggo Height &amp; Weight by Breed</h1>
+  <p class="author">
+Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+  </p>
+  <p class="date">12-11-2018</p>
 </div>
 <div id="we-like-dogs" class="slide section level1">
 <h1>We Like Dogs</h1>
@@ -80,8 +79,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <ul>
 <li>Used Pandas (pd.read_csv())</li>
 <li>But our csv file was a &quot;Latin1&quot; file or a &quot;ISO-8859-1&quot; file</li>
-<li>Added an argument to our read_csv() function that included the encoding information and eliminated the error</li>
+<li>Added an argument to our read_csv() function that included the encoding information and eliminated the error <img src="https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6" alt="TechDoggo" /></li>
 </ul>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">dogs <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://query.data.world/s/wb2m35hoycwvieh3455mrac6l5ewjs&#39;</span>, encoding<span class="op">=</span><span class="st">&quot;ISO-8859-1&quot;</span>)</code></pre></div>
 </div>
 <div id="our-data-1" class="slide section level1">
 <h1>Our Data</h1>
@@ -215,6 +215,13 @@ plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), <span class="st">&#39;m--&
 <span class="co">#save figure</span>
 plt.savefig(<span class="st">&#39;Ave_scatter.png&#39;</span>)</code></pre></div>
 </div>
+<div id="the-outlier" class="slide section level1">
+<h1>The Outlier</h1>
+<div class="figure">
+<img src="https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg" alt="MrLongLegs" />
+<p class="caption">MrLongLegs</p>
+</div>
+</div>
 <div id="we-wanted-to-explore-which-breeds-of-dogs-would-cluster-together" class="slide section level1">
 <h1>We wanted to explore which breeds of dogs would cluster together</h1>
 <p>So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.</p>
@@ -269,28 +276,28 @@ plt.savefig(<span class="st">&#39;src/visualization/cluster0.png&#39;</span>)</c
 <p class="caption">cluster0</p>
 </div>
 </div>
-<div id="section-1" class="slide section level1">
+<div id="section" class="slide section level1">
 <h1></h1>
 <div class="figure">
 <img src="src/visualization/cluster1.png" alt="cluster1" />
 <p class="caption">cluster1</p>
 </div>
 </div>
-<div id="section-2" class="slide section level1">
+<div id="section-1" class="slide section level1">
 <h1></h1>
 <div class="figure">
 <img src="src/visualization/cluster2.png" alt="cluster2" />
 <p class="caption">cluster2</p>
 </div>
 </div>
-<div id="section-3" class="slide section level1">
+<div id="section-2" class="slide section level1">
 <h1></h1>
 <div class="figure">
 <img src="src/visualization/cluster3.png" alt="cluster3" />
 <p class="caption">cluster3</p>
 </div>
 </div>
-<div id="section-4" class="slide section level1">
+<div id="section-3" class="slide section level1">
 <h1></h1>
 <div class="figure">
 <img src="src/visualization/cluster4.png" alt="cluster4" />
