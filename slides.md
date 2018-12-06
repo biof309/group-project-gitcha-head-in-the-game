@@ -37,6 +37,20 @@ So we analyzed data about dogs
 #Chesapeake Bay Retriever
 ![frens](https://vetstreet.brightspotcdn.com/dims4/default/3e810eb/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F96%2F97e4009e9411e0a2380050568d634f%2Ffile%2FChesapeake-Bay-Retriever-4-645mk062111.jpg)
 
+#Histogram of Average Height
+![](src/visualization/Ave_Height_Hist.png)
+```python
+# Make Histogram average height
+import matplotlib.pyplot as plt
+Ave_Height_Hist= plt.hist(Ave_Heights_Weights[:,0],color='skyblue', bins=20)
+# Axis Labels 
+plt.xlabel('Average Height (Inches)')
+plt.ylabel('# Dogs')
+plt.title('Average Height of All Breeds')
+# Save Image 
+plt.savefig('Ave_Height_Hist.png')
+```
+
 #Found Average Weight
 - Using np.mean(average_weight), we found the average weight to be 50.35lbs
 - Which is equivalent to the average weights of these doggos:
@@ -50,6 +64,20 @@ So we analyzed data about dogs
 #Chinese Shar Pei
 ![rollyboi](https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP)
 
+
+#Histogram of Average Weight
+![](src/visualization/Ave_Weight_Hist.png)
+```python
+# Make Histagram of Average Weight
+import matplotlib.pyplot as plt
+Ave_Weight_Hist=plt.hist(Ave_Heights_Weights[:,1], color="skyblue", bins=20, )
+#Axis Labels
+plt.xlabel('Average Weight (lbs)')
+plt.ylabel('# Dogs')
+plt.title('Average Weight of All Breeds')
+# Save Image 
+plt.savefig('Ave_Weight_Hist.png')
+```
 
 # Generated an Exploratory Pair Plot
 - Wanted to take a closer look at the scatter plot and histograms
@@ -78,34 +106,6 @@ plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
 plt.savefig('Ave_scatter.png')
 ```
 
-#Histogram of Average Height
-![](src/visualization/Ave_Height_Hist.png)
-```python
-# Make Histogram average height
-import matplotlib.pyplot as plt
-Ave_Height_Hist= plt.hist(Ave_Heights_Weights[:,0],color='skyblue', bins=20)
-# Axis Labels 
-plt.xlabel('Average Height (Inches)')
-plt.ylabel('# Dogs')
-plt.title('Average Height of All Breeds')
-# Save Image 
-plt.savefig('Ave_Height_Hist.png')
-```
-
-
-#Histogram of Average Weight
-![](src/visualization/Ave_Weight_Hist.png)
-```python
-# Make Histagram of Average Weight
-import matplotlib.pyplot as plt
-Ave_Weight_Hist=plt.hist(Ave_Heights_Weights[:,1], color="skyblue", bins=20, )
-#Axis Labels
-plt.xlabel('Average Weight (lbs)')
-plt.ylabel('# Dogs')
-plt.title('Average Weight of All Breeds')
-# Save Image 
-plt.savefig('Ave_Weight_Hist.png')
-```
 #We wanted to explore which breeds of dogs would cluster together
 So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
 ```python
