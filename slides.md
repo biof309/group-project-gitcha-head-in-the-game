@@ -1,6 +1,6 @@
-% Brief Analysis of Doggo Height & Weight by Breed
-% Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
-% 12-11-2018
+# Brief Analysis of Doggo Height & Weight by Breed
+###Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
+###12-11-2018
 ![TechDoggo](https://us.123rf.com/450wm/acfrank84/acfrank841504/acfrank84150400007/38378085-light-brown-terrier-with-glasses-looking-at-laptop.jpg?ver=6)
 
 # We Like Dogs
