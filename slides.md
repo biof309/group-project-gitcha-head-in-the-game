@@ -62,25 +62,25 @@ plt.title('Average Height of All Breeds')
 plt.savefig('Ave_Height_Hist.png')
 ```
 
-#Found Average Weight
+# Found Average Weight
 
 - Using np.mean(average_weight), we found the average weight to be 50.35lbs
 - Which is equivalent to the average weights of these doggos:
 
-#Samoyed
+# Samoyed
 
 ![floof](https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg)
 
-#Dalmation
+# Dalmation
 
 ![spottyboi](https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg)
 
-#Chinese Shar Pei
+# Chinese Shar Pei
 
 ![rollyboi](https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP)
 
 
-#Histogram of Average Weight
+# Histogram of Average Weight
 
 ![](src/visualization/Ave_Weight_Hist.png)
 ```python
@@ -102,7 +102,7 @@ plt.savefig('Ave_Weight_Hist.png')
 ![pairplot](src/visualization/pairplot.png)
 
 
-#Scatter Plot of Average Height & Weight
+# Scatter Plot of Average Height & Weight
 
 ![](src/visualization/Ave_scatter.png)
 ```python
@@ -125,17 +125,13 @@ plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
 plt.savefig('Ave_scatter.png')
 ```
 
-#The Outlier
-
-![MrLongLegs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)
-
 
 # Vizsla 
 
 ![Mr. long legs](https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg)
 
 
-#We wanted to explore which breeds of dogs would cluster together
+# We wanted to explore which breeds of dogs would cluster together
 
 So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
 ```python
@@ -154,7 +150,7 @@ kmeans.fit(scaled_features)
 clusters=kmeans.predict(scaled_features)
 ``` 
 
-#We wanted to plot these clusters
+# We wanted to plot these clusters
 
 We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters. 
 
@@ -175,12 +171,12 @@ for x,y,breed in zip(x,y,breedlist):
 
 ```
 
-#Here is our final t-SNE plot
+# Here is our final t-SNE plot
 
 ![t-SNE](src/visualization/tSNE.png)
 
 
-#We can look at the individual clusters to see which dogs are in them
+# We can look at the individual clusters to see which dogs are in them
 
 ```python
 plt.scatter(x=cluster0['tsne0'],y=cluster0['tsne1'], alpha=0.5, c='red')
