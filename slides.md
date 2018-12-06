@@ -55,7 +55,7 @@ So we analyzed data about dogs
 
 
 #Scatter Plot of Average Height & Weight
-![](Ave_scatter.png)
+![](src/visualization/Ave_scatter.png)
 ```python
 #Make Scatter Plot
 import matplotlib.pyplot as plt
@@ -81,10 +81,12 @@ plt.savefig('Ave_scatter.png')
 ```python
 # Make Histogram average height
 import matplotlib.pyplot as plt
-Ave_Height_Hist= plt.hist(Ave_Heights_Weights[:,0],color='skyblue')
+Ave_Height_Hist= plt.hist(Ave_Heights_Weights[:,0],color='skyblue', bins=20)
+# Axis Labels 
 plt.xlabel('Average Height (Inches)')
 plt.ylabel('# Dogs')
 plt.title('Average Height of All Breeds')
+# Save Image 
 plt.savefig('Ave_Height_Hist.png')
 ```
 
@@ -94,10 +96,12 @@ plt.savefig('Ave_Height_Hist.png')
 ```python
 # Make Histagram of Average Weight
 import matplotlib.pyplot as plt
-Ave_Weight_Hist=plt.hist(Ave_Heights_Weights[:,1], color="skyblue")
+Ave_Weight_Hist=plt.hist(Ave_Heights_Weights[:,1], color="skyblue", bins=20, )
+#Axis Labels
 plt.xlabel('Average Weight (lbs)')
 plt.ylabel('# Dogs')
 plt.title('Average Weight of All Breeds')
+# Save Image 
 plt.savefig('Ave_Weight_Hist.png')
 ```
 #We wanted to explore which breeds of dogs would cluster together

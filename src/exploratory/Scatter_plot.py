@@ -13,5 +13,8 @@ plt.ylim(1, 190)
 z = np.polyfit(Ave_Heights_Weights[:,0], Ave_Heights_Weights[:,1],1)
 p = np.poly1d(z)
 plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
+plt.show()
+
+
 #save figure
 plt.savefig('Ave_scatter.png')
