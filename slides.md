@@ -18,13 +18,13 @@ So we analyzed data about dogs
 - Added an argument to our read_csv() function that included the encoding information and eliminated the error
 
 # Our Data
-![OurData](Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png)
+![OurData](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.57.16%20PM.png)
 
 # Created New Columns for Average Height and Weight
-![AddAve](Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
+![AddAve](src/dog_pictures/Screen%20Shot%202018-12-04%20at%206.58.19%20PM.png)
 
 #Added Columns to Our Data
-![AddCols](Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
+![AddCols](src/dog_pictures/Screen%20Shot%202018-12-04%20at%207.00.01%20PM.png)
 
 #Found Average Height
 - Using np.mean(average_height), we found the average height to be 19.5 inches
@@ -50,17 +50,136 @@ So we analyzed data about dogs
 ![rollyboi](https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP)
 
 
-# Generated an Exploratory Pear Plot
+# Generated an Exploratory Pair Plot
 - Wanted to take a closer look at the scatter plot and histograms
+![pairplot](src/visualization/pairplot.png)
+
 
 #Scatter Plot of Average Height & Weight
-![Average Height and Weight](Ave_scatter.png)
+![](src/visualization/Ave_scatter.png)
+```python
+#Make Scatter Plot
+import matplotlib.pyplot as plt
+import matplotlib.pylab as plb
+Ave_scatter= plt.scatter(Ave_Heights_Weights[:,0], Ave_Heights_Weights[:,1], s=[70], marker='*',color='skyblue')
+#label axis
+plt.xlabel('Average Height (Inches)')
+plt.ylabel('Average Weight (lbs)')
+plt.title('Average Height and Weight of All Breeds')
+# Set axis limits
+plt.xlim(1, 60)
+plt.ylim(1, 190)
+# Add trendline
+z = np.polyfit(Ave_Heights_Weights[:,0], Ave_Heights_Weights[:,1],1)
+p = np.poly1d(z)
+plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), 'm--')
+#save figure
+plt.savefig('Ave_scatter.png')
+```
 
 #Histogram of Average Height
-![Average Height](Ave_Height_Hist.png)
+![](src/visualization/Ave_Height_Hist.png)
+```python
+# Make Histogram average height
+import matplotlib.pyplot as plt
+Ave_Height_Hist= plt.hist(Ave_Heights_Weights[:,0],color='skyblue', bins=20)
+# Axis Labels 
+plt.xlabel('Average Height (Inches)')
+plt.ylabel('# Dogs')
+plt.title('Average Height of All Breeds')
+# Save Image 
+plt.savefig('Ave_Height_Hist.png')
+```
+
 
 #Histogram of Average Weight
-![Average Weight](Ave_Weight_Hist.png)
+![](src/visualization/Ave_Weight_Hist.png)
+```python
+# Make Histagram of Average Weight
+import matplotlib.pyplot as plt
+Ave_Weight_Hist=plt.hist(Ave_Heights_Weights[:,1], color="skyblue", bins=20, )
+#Axis Labels
+plt.xlabel('Average Weight (lbs)')
+plt.ylabel('# Dogs')
+plt.title('Average Weight of All Breeds')
+# Save Image 
+plt.savefig('Ave_Weight_Hist.png')
+```
+#We wanted to explore which breeds of dogs would cluster together
+So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.
+```python
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+#scale
+scaler=StandardScaler()
+scaled_features=scaler.fit_transform(feature_array)
+
+#create instance of KMeans clusters
+kmeans=KMeans(n_clusters=5)
+
+#fit to data
+kmeans.fit(scaled_features)
+#predict clusters
+clusters=kmeans.predict(scaled_features)
+``` 
+
+#We wanted to plot these clusters
+We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters. 
+
+```python
+from sklearn.manifold import TSNE
+#create instance of t-SNE
+tsne=TSNE(learning_rate=100)
+#fit t-SNE featres
+tsne_features=tsne.fit_transform(scaled_features)breedlist=list(breeds.values.T.flatten())
+
+##make plot
+
+unique_clusters=list(set(clusters))  #cluster labels
+cmap=cm.get_cmap("viridis",5)  #color map
+plt.scatter(x,y, alpha=0.5, c=clusters, label=unique_clusters, cmap=cmap, vmin=-0.5, vmax=4.4) #make graph
+for x,y,breed in zip(x,y,breedlist):
+    plt.annotate(breed, (x,y), fontsize=4, alpha=0.5)  #add labels
+
+```
+
+#Here is our final t-SNE plot
+
+![t-SNE](src/visualization/tSNE.png)
+
+
+#We can look at the individual clusters to see which dogs are in them
+
+```python
+plt.scatter(x=cluster0['tsne0'],y=cluster0['tsne1'], alpha=0.5, c='red')
+plt.title('KMeans Cluster 0')
+zip0=zip(list(cluster0.tsne0), list(cluster0.tsne1), list(cluster0.breeds))
+for x,y,breed in zip0:
+    plt.annotate(breed, (x,y), fontsize=6, alpha=0.5)
+plt.savefig('src/visualization/cluster0.png')
+```
+
+![cluster0](src/visualization/cluster0.png)
+
+#
+
+![cluster1](src/visualization/cluster1.png)
+
+#
+
+![cluster2](src/visualization/cluster2.png)
+
+#
+
+![cluster3](src/visualization/cluster3.png)
+
+#
+
+![cluster4](src/visualization/cluster4.png)
+
+#Here are the dogs that were clustered together by the KMearns clustering
+
+![clusters](src/models/clusters.png)
 
 #Conclusions
 - Our data formed 5 clusters based on height & weight 

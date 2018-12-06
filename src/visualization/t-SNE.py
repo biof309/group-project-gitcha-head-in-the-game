@@ -1,4 +1,5 @@
 from matplotlib import cm
+from sklearn.manifold import TSNE
 #create instance of t-SNE
 tsne=TSNE(learning_rate=100)
 #fit t-SNE featres
@@ -19,7 +20,7 @@ plt.title('T-SNE Plot of Dog Breeds')
 for x,y,breed in zip(x,y,breedlist):
     plt.annotate(breed, (x,y), fontsize=4, alpha=0.5)
 
-plt.savefig('tSNE')
+plt.savefig('src/visualization/tSNE')
 
 
 
