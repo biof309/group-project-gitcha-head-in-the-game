@@ -168,11 +168,38 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <a class="sourceLine" id="cb2-7" data-line-number="7">plt.title(<span class="st">&#39;Average Height of All Breeds&#39;</span>)</a>
 <a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co"># Save Image </span></a>
 <a class="sourceLine" id="cb2-9" data-line-number="9">plt.savefig(<span class="st">&#39;Ave_Height_Hist.png&#39;</span>)</a></code></pre></div>
-<p>#Found Average Weight - Using np.mean(average_weight), we found the average weight to be 50.35lbs - Which is equivalent to the average weights of these doggos:</p>
-<p>#Samoyed <img src="https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg" alt="floof" /></p>
-<p>#Dalmation <img src="https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg" alt="spottyboi" /></p>
-<p>#Chinese Shar Pei <img src="https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP" alt="rollyboi" /></p>
-<p>#Histogram of Average Weight <img src="src/visualization/Ave_Weight_Hist.png" /></p>
+</div>
+<div id="found-average-weight" class="slide section level1">
+<h1>Found Average Weight</h1>
+<ul>
+<li>Using np.mean(average_weight), we found the average weight to be 50.35lbs</li>
+<li>Which is equivalent to the average weights of these doggos:</li>
+</ul>
+</div>
+<div id="samoyed" class="slide section level1">
+<h1>Samoyed</h1>
+<div class="figure">
+<img src="https://cdn1-www.dogtime.com/assets/uploads/gallery/samoyed-dogs-and-puppies/samoyed-dogs-puppies-5.jpg" alt="floof" />
+<p class="caption">floof</p>
+</div>
+</div>
+<div id="dalmation" class="slide section level1">
+<h1>Dalmation</h1>
+<div class="figure">
+<img src="https://vetstreet-brightspot.s3.amazonaws.com/ee/140380a73111e0a0d50050568d634f/file/Dalmatian-2-645mk062311.jpg" alt="spottyboi" />
+<p class="caption">spottyboi</p>
+</div>
+</div>
+<div id="chinese-shar-pei" class="slide section level1">
+<h1>Chinese Shar Pei</h1>
+<div class="figure">
+<img src="https://www2.vet.cornell.edu/sites/default/files/styles/nodecontent_default/public/Shar_pei_puppy_%28age_2_months%29.jpg?itok=qk5oS0PP" alt="rollyboi" />
+<p class="caption">rollyboi</p>
+</div>
+</div>
+<div id="histogram-of-average-weight" class="slide section level1">
+<h1>Histogram of Average Weight</h1>
+<p><img src="src/visualization/Ave_Weight_Hist.png" /></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="co"># Make Histagram of Average Weight</span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
 <a class="sourceLine" id="cb3-3" data-line-number="3">Ave_Weight_Hist<span class="op">=</span>plt.hist(Ave_Heights_Weights[:,<span class="dv">1</span>], color<span class="op">=</span><span class="st">&quot;skyblue&quot;</span>, bins<span class="op">=</span><span class="dv">20</span>, )</a>
@@ -186,9 +213,16 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <div id="generated-an-exploratory-pair-plot" class="slide section level1">
 <h1>Generated an Exploratory Pair Plot</h1>
 <ul>
-<li>Wanted to take a closer look at the scatter plot and histograms <img src="src/visualization/pairplot.png" alt="pairplot" /></li>
+<li>Wanted to take a closer look at the scatter plot and histograms</li>
 </ul>
-<p>#Scatter Plot of Average Height &amp; Weight <img src="src/visualization/Ave_scatter.png" /></p>
+<div class="figure">
+<img src="src/visualization/pairplot.png" alt="pairplot" />
+<p class="caption">pairplot</p>
+</div>
+</div>
+<div id="scatter-plot-of-average-height-weight" class="slide section level1">
+<h1>Scatter Plot of Average Height &amp; Weight</h1>
+<p><img src="src/visualization/Ave_scatter.png" /></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">#Make Scatter Plot</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="im">import</span> matplotlib.pylab <span class="im">as</span> plb</a>
@@ -206,8 +240,17 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <a class="sourceLine" id="cb4-15" data-line-number="15">plb.plot(Ave_Heights_Weights, p(Ave_Heights_Weights), <span class="st">&#39;m--&#39;</span>)</a>
 <a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#save figure</span></a>
 <a class="sourceLine" id="cb4-17" data-line-number="17">plt.savefig(<span class="st">&#39;Ave_scatter.png&#39;</span>)</a></code></pre></div>
-<p>#The Outlier <img src="https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg" alt="MrLongLegs" /></p>
-<p>#We wanted to explore which breeds of dogs would cluster together So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.</p>
+</div>
+<div id="vizsla" class="slide section level1">
+<h1>Vizsla</h1>
+<div class="figure">
+<img src="https://vetstreet-brightspot.s3.amazonaws.com/19/951e90a80911e0a0d50050568d634f/file/Vizsla-4-645mk062911.jpg" alt="Mr. long legs" />
+<p class="caption">Mr. long legs</p>
+</div>
+</div>
+<div id="we-wanted-to-explore-which-breeds-of-dogs-would-cluster-together" class="slide section level1">
+<h1>We wanted to explore which breeds of dogs would cluster together</h1>
+<p>So first, we used KMeans clustering, which is an unsupervised learning technique, to cluster breeds based on their characteristics.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</a>
 <a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#scale</span></a>
@@ -221,7 +264,10 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <a class="sourceLine" id="cb5-11" data-line-number="11">kmeans.fit(scaled_features)</a>
 <a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#predict clusters</span></a>
 <a class="sourceLine" id="cb5-13" data-line-number="13">clusters<span class="op">=</span>kmeans.predict(scaled_features)</a></code></pre></div>
-<p>#We wanted to plot these clusters We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters.</p>
+</div>
+<div id="we-wanted-to-plot-these-clusters" class="slide section level1">
+<h1>We wanted to plot these clusters</h1>
+<p>We used t-SNE to plot the data in 2-dimensional space. The graph is colored by the KMeans clusters.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE</a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#create instance of t-SNE</span></a>
 <a class="sourceLine" id="cb6-3" data-line-number="3">tsne<span class="op">=</span>TSNE(learning_rate<span class="op">=</span><span class="dv">100</span>)</a>
@@ -235,12 +281,16 @@ Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 <a class="sourceLine" id="cb6-11" data-line-number="11">plt.scatter(x,y, alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span>clusters, label<span class="op">=</span>unique_clusters, cmap<span class="op">=</span>cmap, vmin<span class="op">=-</span><span class="fl">0.5</span>, vmax<span class="op">=</span><span class="fl">4.4</span>) <span class="co">#make graph</span></a>
 <a class="sourceLine" id="cb6-12" data-line-number="12"><span class="cf">for</span> x,y,breed <span class="kw">in</span> <span class="bu">zip</span>(x,y,breedlist):</a>
 <a class="sourceLine" id="cb6-13" data-line-number="13">    plt.annotate(breed, (x,y), fontsize<span class="op">=</span><span class="dv">4</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)  <span class="co">#add labels</span></a></code></pre></div>
-<p>#Here is our final t-SNE plot</p>
+</div>
+<div id="here-is-our-final-t-sne-plot" class="slide section level1">
+<h1>Here is our final t-SNE plot</h1>
 <div class="figure">
 <img src="src/visualization/tSNE.png" alt="t-SNE" />
 <p class="caption">t-SNE</p>
 </div>
-<p>#We can look at the individual clusters to see which dogs are in them</p>
+</div>
+<div id="we-can-look-at-the-individual-clusters-to-see-which-dogs-are-in-them" class="slide section level1">
+<h1>We can look at the individual clusters to see which dogs are in them</h1>
 <div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb7-1" data-line-number="1">plt.scatter(x<span class="op">=</span>cluster0[<span class="st">&#39;tsne0&#39;</span>],y<span class="op">=</span>cluster0[<span class="st">&#39;tsne1&#39;</span>], alpha<span class="op">=</span><span class="fl">0.5</span>, c<span class="op">=</span><span class="st">&#39;red&#39;</span>)</a>
 <a class="sourceLine" id="cb7-2" data-line-number="2">plt.title(<span class="st">&#39;KMeans Cluster 0&#39;</span>)</a>
 <a class="sourceLine" id="cb7-3" data-line-number="3">zip0<span class="op">=</span><span class="bu">zip</span>(<span class="bu">list</span>(cluster0.tsne0), <span class="bu">list</span>(cluster0.tsne1), <span class="bu">list</span>(cluster0.breeds))</a>
