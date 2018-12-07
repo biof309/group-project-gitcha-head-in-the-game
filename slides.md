@@ -188,23 +188,23 @@ plt.savefig('src/visualization/cluster0.png')
 
 ![cluster0](src/visualization/cluster0.png)
 
-#
+#  
 
 ![cluster1](src/visualization/cluster1.png)
 
-#
+#  
 
 ![cluster2](src/visualization/cluster2.png)
 
-#
+#  
 
 ![cluster3](src/visualization/cluster3.png)
 
-#
+#  
 
 ![cluster4](src/visualization/cluster4.png)
 
-#Here are the dogs that were clustered together by the KMearns clustering
+# Here are the dogs that were clustered together by the KMearns clustering
 
 ![clusters](src/models/clusters.png)
 
