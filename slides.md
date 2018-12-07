@@ -2,7 +2,7 @@
 % Kaite Donahue, Micaela McCall, Libby Aliberti, Mia Sievers
 % 12-11-2018
 
-# We Like Dogs
+#We Like Dogs
 So we analyzed data about dogs 
 ![Buds](https://www.dogster.com/wp-content/uploads/2018/06/A-litter-or-group-of-puppies.jpg)
 
